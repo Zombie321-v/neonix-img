@@ -442,7 +442,7 @@ async function generateSingleImage(finalPrompt, retryCount = 2) {
   return new Promise((resolve, reject) => {
     const uniqueSeed = Date.now() + Math.random() * 100000;
     // ✅ YEH EK HI LINE CHANGE KARNI HAI - Purani URL ko naye se replace karo:
-   const url = `https://image.pollinations.ai/prompt/${encodeURIComponent(finalPrompt)}?width=1024&height=1024&seed=${uniqueSeed}`;
+   const url = `https://gen.pollinations.ai/image/${encodeURIComponent(finalPrompt)}?model=flux&seed=${uniqueSeed}`;
     
     const img = new Image();
     img.crossOrigin = "Anonymous";
